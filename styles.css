@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  animation: fade-in 0.5s ease-in;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body > div.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #31bef4;
+  width: 100%;
+}
+
+nav.navbar {
+  background-color: #31bef4;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+nav.navbar > button.navbar-toggler {
+  border: none;
+}
+
+button.navbar-toggler > span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media screen and (max-width: 1100px) {
+  nav[shadow] {
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+  }
+
+  nav.navbar {
+    overflow: scroll;
+  }
+  div#navbarSupportedContent {
+    width: 100%;
+  }
+  ul#nav-items {
+    margin: 1.25rem 0 0 0;
+    text-align: left;
+    align-items: start;
+  }
+
+  ul#nav-items > li.nav-item {
+    padding: 0;
+  }
+}
+
+nav.navbar > div > ul {
+  width: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+ul.navbar-nav > li.nav-item {
+  font: 1.125rem bold;
+  font-family: "Ubuntu", sans-serif;
+  padding: 0 0.625rem;
+  transition: 0.2s ease-in;
+  text-transform: uppercase;
+}
+
+li.nav-item > a > button#btn-login {
+  border: none;
+  width: 6.875rem;
+  height: 2.813rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #f44132;
+  cursor: pointer;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+li.nav-item:hover {
+  filter: opacity(0.85);
+}
+
+div.jumbotron {
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.jumbotron > div.container {
+  margin: 0;
+  width: 100%;
+}
+
+div.jumbotron > div.container > h1 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+div.jumbotron > div.container > a > button#btn-contact {
+  text-decoration: none;
+  border: none;
+  width: 33%;
+  min-width: 12.5rem;
+  height: 2.8rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #f44132;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.2s ease-in;
+}
+
+button#btn-contact:hover {
+  filter: opacity(0.85);
+}
+
+@media screen and (max-width: 1060px) {
+  div.jumbotron {
+    flex-direction: column;
+    justify-content: center;
+  }
+  div.jumbotron > div.container:last-child {
+    margin-top: 3.125rem;
+  }
+}
+
+body > div.main > div.dinbot {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+div.dinbot > div.container {
+  margin: 0;
+  width: 100%;
+}
+
+div.dinbot > div.container > img {
+  width: 100%;
+  max-width: 870px;
+}
+
+div.dinbot > div > h1 {
+  font-family: "Ubuntu", sans-serif;
+  color: #31bef4;
+}
+
+@media screen and (max-width: 1060px) {
+  div.dinbot {
+    flex-direction: column;
+  }
+  div.dinbot > div.container:last-child {
+    margin-top: 3.125rem;
+  }
+}
+
+div.main > div.main-content {
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div.main > div.main-content#clients {
+  background-color: #f2f2f2;
+}
+div.waves {
+  width: 100%;
+  height: 9.375rem;
+  background-color: #f2f2f2;
+}
+
+div.waves-bottom {
+  width: 100%;
+  height: 9.375rem;
+  background-color: #f2f2f2;
+  transform: rotate(180deg);
+}
+
+div.main-content > h1 {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+div.main-content > p {
+  text-align: center;
+}
+
+div.main-content > div.colabs {
+  display: grid;
+  column-gap: 3.125rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  div.main-content > div.colabs {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  div.main-content > div.colabs > div.colab {
+    margin-top: 1.875rem;
+    width: 100%;
+  }
+
+  div.colabs > div.colab > img {
+    height: 31.25rem;
+  }
+}
+
+div.main-content > div.colabs > div.colab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 46.875rem;
+  transition: transform 0.2s ease-in;
+}
+
+div.colab:hover {
+  transform: translateY(-2.5%);
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.1));
+}
+
+div.colab:hover > img {
+  filter: saturate(1);
+}
+
+div.colab > img {
+  width: 100%;
+  height: 15.625rem;
+  min-height: 15.625rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  filter: saturate(0);
+  transition: filter 0.2s ease-in;
+}
+
+div.colab > div.colab-data {
+  background-color: #fff;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+
+div.colab > div.colab-data > h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 15rem;
+}
+
+div.colab > div.colab-data > p {
+  color: #565656;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  height: 15.625rem;
+  max-height: 15.625rem;
+}
+
+div.plans {
+  display: grid;
+  column-gap: 1.25rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  div.main-content > div.plans {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  div.main-content > div.plans > div.plan {
+    margin-top: 1.875rem;
+  }
+}
+
+div.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.125rem 0.25rem 0.94rem rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  border-radius: 0.625rem;
+  border-top: 0.313rem solid white;
+  transition: border 0.2s ease-in;
+}
+
+div.plan[actived] {
+  border-top: 0.313rem solid #f44132;
+}
+
+div.plan:hover {
+  border-top: 0.313rem solid #f44132;
+}
+
+div.plan > div.plan-header {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  height: 9.375rem;
+}
+
+div.plan > div.plan-header > h3 {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: bold;
+}
+
+div.plan > div.plan-header > p {
+  color: #565656;
+}
+
+div.plan > div.plan-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div.plan > div.plan-body > span.price {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #f44132;
+}
+
+div.plan > div.plan-body > span.price > span.symbol {
+  font-size: 2rem;
+}
+
+div.plan > div.plan-body > span.price > span.text-muted {
+  font-size: 1.75rem;
+}
+div.plan > div.plan-body > div.especifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(59, 59, 59);
+}
+
+div.plan > div.plan-footer > button.btn-getStarted {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: bold;
+  width: 200px;
+  height: 3.125rem;
+  border-radius: 3.125rem;
+  background-color: #fff;
+  border: solid 1px #f44132;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+div.plan > div.plan-footer > button.btn-getStarted:hover {
+  background-color: #f44132;
+  color: #fff;
+}
+
+div.social-network {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+div.social-network > h1 {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: bold;
+}
+
+div.social-network > div.row > div.col {
+  width: min-content;
+}
+
+div.social-network > div.row > div.col > i {
+  font-size: 6.25rem;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+}
+
+div.social-network > div.row > div.col > i:hover {
+  color: #f44132;
+}
+
+div.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+div.footer > div.row > div.col > span,
+a,
+p {
+  font-size: 1.125rem;
+}
+
+div.row > div.col > h3 {
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1100px) {
+  div.footer > div.row > div.col:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
