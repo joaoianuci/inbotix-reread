@@ -108,7 +108,7 @@ li.nav-item:hover {
 div.jumbotron {
   color: #fff;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -154,9 +154,9 @@ button#btn-contact:hover {
 
 body > div.main > div.dinbot {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  min-height: 400px;
 }
 
 div.dinbot > div.container {
@@ -177,8 +177,12 @@ div.dinbot > div > h1 {
 @media screen and (max-width: 1060px) {
   div.dinbot {
     flex-direction: column;
+    min-height: none;
   }
-  div.dinbot > div.container:last-child {
+  div.dinbot:first-child{
+    flex-direction: column-reverse;
+  }
+  div.dinbot > div.container:first-child {
     margin-top: 3.125rem;
   }
 }
@@ -228,7 +232,7 @@ div.main-content > div.colabs {
   div.main-content > div.colabs {
     grid-template-columns: 1fr;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
   }
 
   div.main-content > div.colabs > div.colab {
@@ -304,7 +308,7 @@ div.plans {
   div.main-content > div.plans {
     grid-template-columns: 1fr;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
   }
 
   div.main-content > div.plans > div.plan {
@@ -336,7 +340,7 @@ div.plan:hover {
 div.plan > div.plan-header {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 9.375rem;
@@ -404,7 +408,7 @@ div.social-network {
   width: 100%;
   text-align: center;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -417,13 +421,14 @@ div.social-network > div.row > div.col {
   width: min-content;
 }
 
-div.social-network > div.row > div.col > i {
+div.social-network > div.row > div.col > a > i {
   font-size: 6.25rem;
   transition: color 0.2s ease-in;
   cursor: pointer;
+  color: #212529;
 }
 
-div.social-network > div.row > div.col > i:hover {
+div.social-network > div.row > div.col > a > i:hover {
   color: #f44132;
 }
 
